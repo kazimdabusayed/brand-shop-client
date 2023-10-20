@@ -56,7 +56,7 @@ const Register = () => {
     return (
 		<div>
 			<div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-				<div className="w-full px-6 py-2 m-auto rounded-md md:max-w-xl p-6 shadow-xl shadow-rose-600/40 ring-2 ring-purple-600">
+				<div className="w-full px-6 py-2 m-auto rounded-md md:max-w-xl p-6 shadow-xl shadow-rose-600/40 md:ring-2 ring-purple-600">
 					<h1 className="text-3xl font-semibold text-center text-purple-600 underline decoration-wavy">
 						Create a new account
 					</h1>
