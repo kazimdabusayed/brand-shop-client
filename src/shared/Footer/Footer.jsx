@@ -5,16 +5,15 @@ const Footer = () => {
 			<div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
 				<div className="md:flex md:justify-between">
 					<div className="mb-6 md:mb-0">
-						<a
-							href="#"
-							className="flex items-center"
-						>
+						<a href="#" className="flex items-center">
 							<img
-								src="https://flowbite.com/docs/images/logo.svg"
-								className="h-8 mr-3"
+								src="https://icons.iconarchive.com/icons/cemagraphics/classic-cars/72/bmw-mini-icon.png"
+								width="72"
+								height="72"
+								className="mr-3"
 								alt="Logo"
 							/>
-							<span className="self-center text-2xl font-semibold whitespace-nowrap ">
+							<span className="self-center text-xl font-semibold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent ">
 								AutoBuzz
 							</span>
 						</a>
@@ -26,10 +25,7 @@ const Footer = () => {
 							</h2>
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
-									<a
-										href="#"
-										className="hover:underline"
-									>
+									<a href="#" className="hover:underline">
 										AutoBuzz
 									</a>
 								</li>

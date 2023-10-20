@@ -44,10 +44,10 @@ const Navber = () => {
 		<nav
 			className={classNames(
 				scrollPosition > 0 ? "shadow" : "shadow-none",
-				"sticky top-0 z-20 bg-white transition-shadow dark:bg-gray-900 w-full border-gray-200 dark:border-gray-600"
+				"sticky top-0 z-20 bg-white transition-shadow w-full"
 			)}
 		>
-			<div className="navbar bg-base-100">
+			<div className="navbar py-0 bg-base-100">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,8 +73,16 @@ const Navber = () => {
 							{navLinks}
 						</ul>
 					</div>
-					<a href="/" className="btn btn-ghost normal-case text-xl">
-						AutoBuzz
+					<a href="/" className="flex gap-1">
+						<img
+							src="https://icons.iconarchive.com/icons/cemagraphics/classic-cars/72/camaro-icon.png"
+							width="72"
+							height="72"
+							className="hidden md:block"
+						/>
+						<span className="md:mt-5 font-bold text-xl md:text-2xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+							AutoBuzz
+						</span>
 					</a>
 				</div>
 				<div className="navbar-center hidden lg:flex">
@@ -82,16 +90,14 @@ const Navber = () => {
 						{navLinks}
 					</ul>
 				</div>
-
 				<div className="navbar-end">
 					<label className="swap swap-rotate mr-2">
 						{/* this hidden checkbox controls the state */}
-						<input 
-							type="checkbox" 
-							onChange={handleToggle} 
+						<input
+							type="checkbox"
+							onChange={handleToggle}
 							checked={theme === "light" ? false : true}
 						/>
-
 						{/* sun icon */}
 						<svg
 							className="swap-on fill-current w-9 h-9"
@@ -125,15 +131,15 @@ const Navber = () => {
 							</label>
 							<button
 								onClick={handleSignOut}
-								className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white"
+								className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white normal-case"
 							>
 								Log Out
 							</button>
 						</>
 					) : (
 						<Link to="/login">
-							<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3">
-								Login
+							<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3 normal-case">
+								Log In
 							</button>
 						</Link>
 					)}
