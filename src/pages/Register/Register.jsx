@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useState } from "react";
+import Swal from "sweetalert2";
 
 const Register = () => {
 	const { createUser } = useContext(AuthContext);
@@ -42,15 +43,36 @@ const Register = () => {
 
 		//createUser
 		createUser(email, password, confirmPassword, name)
-			.then((result) => {
-				console.log(result.user);
-				setSuccess("User created successfully.");
-				navigate("/login");
+		.then(result =>{
+			console.log(result.user);
+			//new user has been created
+			const createdAt = result.user.metadata?.creationTime;
+			const user = { email, createdAt: createdAt };
+			fetch("http://localhost:5000/users", {
+				method: "POST",
+				headers: {
+					"content-type": "application/json",
+				},
+				body: JSON.stringify(user),
 			})
-			.catch((error) => {
-				console.error(error);
-				setSignupError(error.message);
-			});
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
+					if (data.insertedId) {
+						Swal.fire({
+							title: "Success!",
+							text: "User Added Succssfully",
+							icon: "success",
+							confirmButtonText: "Ok",
+						});
+					}
+					navigate("/login");
+				});
+        })
+        .catch(error =>{
+            console.error(error);
+			setSignupError(error.message);
+        })
 	};
 
     return (

@@ -11,7 +11,7 @@ const Navber = () => {
     const scrollPosition = useScrolPosition();
 	const { user, logOut } = useContext(AuthContext);
 
-	const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+	const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark");
 	useEffect(() =>{
 		localStorage.setItem("theme", theme);
 		const localTheme = localStorage.getItem("theme");
@@ -20,9 +20,9 @@ const Navber = () => {
 
 	const handleToggle = (e) =>{
 		if (e.target.checked) {
-			setTheme("dark");
+			setTheme("light");
 		} else{
-			setTheme("light")
+			setTheme("dark")
 		}
 	}
 
@@ -47,7 +47,7 @@ const Navber = () => {
 				"sticky top-0 z-20 bg-white transition-shadow w-full"
 			)}
 		>
-			<div className="navbar py-0 bg-base-100">
+			<div className="navbar py-0 md:px-4 bg-base-100">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -96,7 +96,7 @@ const Navber = () => {
 						<input
 							type="checkbox"
 							onChange={handleToggle}
-							checked={theme === "light" ? false : true}
+							checked={theme === "dark" ? false : true}
 						/>
 						{/* sun icon */}
 						<svg
@@ -131,14 +131,14 @@ const Navber = () => {
 							</label>
 							<button
 								onClick={handleSignOut}
-								className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white normal-case"
+								className="md:btn rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white px-4 py-2 md:px-6 md:py-3 normal-case"
 							>
 								Log Out
 							</button>
 						</>
 					) : (
 						<Link to="/login">
-							<button className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white px-6 py-3 normal-case">
+							<button className="md:btn rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white px-4 py-2 md:px-6 md:py-3 normal-case">
 								Log In
 							</button>
 						</Link>

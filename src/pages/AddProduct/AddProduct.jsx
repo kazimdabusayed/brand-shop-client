@@ -47,7 +47,7 @@ const AddProduct = () => {
 	}
 
     return (
-		<div className="p-8 md:p-16 lg:p-22">
+		<div className="p-7 md:p-16 lg:p-22">
 			<h3 className="text-2xl text-indigo-600 text-center mb-6">
 				Add a Product
 			</h3>
@@ -125,7 +125,7 @@ const AddProduct = () => {
 				</div>
 				<input
 					type="submit"
-					className="text-white mt-4 bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-amber-800 font-medium rounded-lg w-full px-5 py-2.5 text-center "
+					className="rounded-md bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white mt-4 focus:ring-2 focus:outline-none md:focus:ring-orange-600 font-medium w-full px-5 py-2.5 text-center cursor-pointer"
 					value="Add Product"
 				/>
 			</form>

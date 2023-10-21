@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"name": "Bentley",
+		"image": "https://i.postimg.cc/mgfJ3W2P/bentley-logo.webp"
+	},
+	{
+		"id": 2,
+		"name": "Rolls Royce",
+		"image": "https://i.postimg.cc/wTsnsjHK/Rolls-Royce-logo.webp"
+	},
+	{
+		"id": 3,
+		"name": "Mercedes-Benz",
+		"image": "https://i.ibb.co/g7ndHJQ/mercedes-benz-logo-2009-present-2048x1485.webp"
+	},
+	{
+		"id": 4,
+		"name": "Tesla",
+		"image": "https://i.postimg.cc/SxKXS3Cv/tesla-logo.webp"
+	},
+	{
+		"id": 5,
+		"name": "BMW",
+		"image": "https://i.postimg.cc/q7hznKmc/bmw-logo.webp"
+	},
+	{
+		"id": 6,
+		"name": "Audi",
+		"image": "https://i.postimg.cc/HWNfx7q4/audi-logo-2016-download.webp"
+	},
+	{
+		"id": 7,
+		"name": "Aston Martin",
+		"image": "https://i.postimg.cc/CxGtmrzm/Aston-Martin-logo.webp"
+	}
+]
