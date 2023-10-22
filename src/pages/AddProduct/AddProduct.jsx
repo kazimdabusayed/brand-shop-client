@@ -8,7 +8,7 @@ const AddProduct = () => {
 		const form = event.target;
 		const name = form.name.value;
 		const brandName = form.brandName.value;
-		const category = form.category.value;
+		const type = form.type.value;
 		const rating = form.rating.value;
 		const description = form.description.value;
 		const price = form.price.value;
@@ -16,7 +16,7 @@ const AddProduct = () => {
 		const newProduct = {
 			name,
 			brandName,
-			category,
+			type,
 			rating,
 			description,
 			price,
@@ -63,26 +63,46 @@ const AddProduct = () => {
 						/>
 					</div>
 					<div className="">
-						<label className="block mb-2 font-medium">
-							Brand Name
+						<label
+							htmlFor="brandName"
+							className="block mb-2 font-medium"
+						>
+							Select an option
 						</label>
-						<input
-							type="text"
+						<select
+							id="brandName"
 							name="brandName"
-							className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-							placeholder="Enter brand name"
-						/>
+							className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+						>
+							<option selected>Choose a brand</option>
+							<option>BMW</option>
+							<option>Mercedes-Benz</option>
+							<option>Tesla</option>
+							<option>Aston Martin</option>
+							<option>Bentley</option>
+							<option>Rolls Royce</option>
+						</select>
 					</div>
 					<div className="">
-						<label className="block mb-2 font-medium">
-							Category
+						<label
+							htmlFor="type"
+							className="block mb-2 font-medium"
+						>
+							Select an option
 						</label>
-						<input
-							type="text"
-							name="category"
+						<select
+							id="type"
+							name="type"
 							className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-							placeholder="Enter category name"
-						/>
+						>
+							<option selected>Choose a type</option>
+							<option>Sedan</option>
+							<option>SUV</option>
+							<option>Tesla</option>
+							<option>Aston Martin</option>
+							<option>Bentley</option>
+							<option>Rolls Royce</option>
+						</select>
 					</div>
 					<div className="">
 						<label className="block mb-2 font-medium">Rating</label>
