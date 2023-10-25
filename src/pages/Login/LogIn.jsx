@@ -48,7 +48,7 @@ const LogIn = () => {
 					<div className="mb-2">
 						<label
 							htmlFor="email"
-							className="block font-semibold text-gray-800 dark:text-gray-100"
+							className="block font-semibold"
 						>
 							Email
 						</label>
@@ -62,7 +62,7 @@ const LogIn = () => {
 					<div className="mb-2">
 						<label
 							htmlFor="password"
-							className="block font-semibold text-gray-800 dark:text-gray-100"
+							className="block font-semibold"
 						>
 							Password
 						</label>
@@ -101,7 +101,7 @@ const LogIn = () => {
 						<p className="ml-3">Google</p>
 					</button>
 				</div>
-				<p className="mt-6 text-base text-center text-gray-800 dark:text-gray-100">
+				<p className="mt-6 text-center">
 					{" "}
 					Don&apos;t have an account?{" "}
 					<Link

@@ -98,14 +98,15 @@ const AddProduct = () => {
 							<option selected>Choose a type</option>
 							<option>Sedan</option>
 							<option>SUV</option>
-							<option>Tesla</option>
-							<option>Aston Martin</option>
-							<option>Bentley</option>
-							<option>Rolls Royce</option>
+							<option>Convertible</option>
+							<option>Coupe</option>
+							<option>Crossover</option>
+							<option>MVP</option>
 						</select>
 					</div>
 					<div className="">
 						<label className="block mb-2 font-medium">Rating</label>
+						{/* <Rating name="rating"></Rating> */}
 						<input
 							type="text"
 							name="rating"

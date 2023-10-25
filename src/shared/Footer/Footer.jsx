@@ -31,10 +31,10 @@ const Footer = () => {
 								</li>
 								<li>
 									<a
-										href="https://tailwindcss.com/"
+										href="#"
 										className="hover:underline"
 									>
-										Tailwind CSS
+										Services
 									</a>
 								</li>
 							</ul>
@@ -46,15 +46,15 @@ const Footer = () => {
 							<ul className="text-gray-500 dark:text-gray-400 font-medium">
 								<li className="mb-4">
 									<a
-										href="https://github.com/themesberg/flowbite"
+										href="#"
 										className="hover:underline "
 									>
-										Github
+										Facebook
 									</a>
 								</li>
 								<li>
 									<a
-										href="https://discord.gg/4eeurUVvTy"
+										href="#"
 										className="hover:underline"
 									>
 										Discord
@@ -86,7 +86,7 @@ const Footer = () => {
 					<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
 						© 2023{" "}
 						<a
-							href="https://flowbite.com/"
+							href="#"
 							className="hover:underline"
 						>
 							AutoBuzz™
