@@ -34,7 +34,7 @@ const MyCart = () => {
 											</span>
 											<img
 												className="h-24 w-24 max-w-full rounded-lg object-cover"
-												src="https://images.unsplash.com/photo-1588484628369-dd7a85bfdc38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHNuZWFrZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=150&q=60"
+												src="#"
 												alt=""
 											/>
 										</div>
@@ -91,7 +91,7 @@ const MyCart = () => {
 											</span>
 											<img
 												className="h-24 w-24 max-w-full rounded-lg object-cover"
-												src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=150&q=60"
+												src="#"
 												alt=""
 											/>
 										</div>

@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
 	const { createUser } = useContext(AuthContext);
@@ -48,7 +48,7 @@ const Register = () => {
 			//new user has been created
 			const createdAt = result.user.metadata?.creationTime;
 			const user = { email, createdAt: createdAt };
-			fetch("http://localhost:5000/users", {
+			fetch("https://autobuzz-server.vercel.app/users", {
 				method: "POST",
 				headers: {
 					"content-type": "application/json",

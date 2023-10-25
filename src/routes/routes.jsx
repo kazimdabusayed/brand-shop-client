@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
 import MainLayout from "../layouts/MainLayout";
+import AddProduct from "../pages/AddProduct/AddProduct";
 import Error from "../pages/Error/Error";
+import BrandDetails from "../pages/Home/BrandCard/BrandDetails/BrandDetails";
 import Home from "../pages/Home/Home";
 import LogIn from "../pages/Login/LogIn";
+import MyCart from "../pages/MyCart/MyCart";
 import Register from "../pages/Register/Register";
-import AddProduct from "../pages/AddProduct/AddProduct"
-import MyCart from "../pages/MyCart/MyCart"
 import PrivateRoute from "./PrivateRoute";
-import BrandDetails from "../pages/Home/BrandCard/BrandDetails/BrandDetails";
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,20 @@ const router = createBrowserRouter([
 			{
 				path: "/brands/:name",
 				element: <BrandDetails></BrandDetails>,
-				loader: () => fetch(`http://localhost:5000/product`),
+				loader: () =>
+					fetch(`https://autobuzz-server.vercel.app/product`),
+			},
+			{
+				path: "/products/:id",
+				element: (
+					<PrivateRoute>
+						<ProductDetails></ProductDetails>
+					</PrivateRoute>
+				),
+				loader: ({ params }) =>
+					fetch(
+						`https://autobuzz-server.vercel.app/product/${params.id}`
+					),
 			},
 			{
 				path: "/login",

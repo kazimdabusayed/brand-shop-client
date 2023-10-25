@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 		console.log(updatedProduct);
 
 		// send data to the server
-		fetch(``, {
+		fetch(`https://autobuzz-server.vercel.app/products/${_id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",
