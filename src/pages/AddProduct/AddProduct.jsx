@@ -32,18 +32,19 @@ const AddProduct = () => {
 			},
 			body: JSON.stringify(newProduct),
 		})
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if (data.insertedId) {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Product Added Succssfully",
-                    icon: "success",
-                    confirmButtonText: "Ok",
-                });
-            }
-        });
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				if (data.insertedId) {
+					Swal.fire({
+						title: "Success!",
+						text: "Product Added Succssfully",
+						icon: "success",
+						confirmButtonText: "Ok",
+					});
+				}
+				form.reset();
+			});
 	}
 
     return (

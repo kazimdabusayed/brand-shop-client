@@ -37,7 +37,6 @@ const Navber = () => {
 			<li><NavLink to="/">Home</NavLink></li>
 			<li><NavLink to="/addproduct">Add Product</NavLink></li>
 			<li><NavLink to="/cart">My Cart</NavLink></li>
-			<li><NavLink to="/profile">Profile</NavLink></li>
 		</>
 	);
     return (
@@ -131,14 +130,14 @@ const Navber = () => {
 							</label>
 							<button
 								onClick={handleSignOut}
-								className="md:btn rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white px-4 py-2 md:px-6 md:py-3 normal-case"
+								className="btn-sm md:btn-md rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white  normal-case"
 							>
 								Log Out
 							</button>
 						</>
 					) : (
 						<Link to="/login">
-							<button className="md:btn rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white px-4 py-2 md:px-6 md:py-3 normal-case">
+							<button className="btn-sm md:btn-md rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 md:hover:from-pink-500 md:hover:to-orange-500 dark:text-white text-white normal-case">
 								Log In
 							</button>
 						</Link>

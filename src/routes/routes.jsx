@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import LogIn from "../pages/Login/LogIn";
 import MyCart from "../pages/MyCart/MyCart";
 import Register from "../pages/Register/Register";
+import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -25,8 +26,7 @@ const router = createBrowserRouter([
 			{
 				path: "/brands/:name",
 				element: <BrandDetails></BrandDetails>,
-				loader: () =>
-					fetch(`https://autobuzz-server.vercel.app/product`),
+				loader: () => fetch(`https://autobuzz-server.vercel.app/products`),
 			},
 			{
 				path: "/products/:id",
@@ -36,9 +36,17 @@ const router = createBrowserRouter([
 					</PrivateRoute>
 				),
 				loader: ({ params }) =>
-					fetch(
-						`https://autobuzz-server.vercel.app/product/${params.id}`
-					),
+					fetch(`https://autobuzz-server.vercel.app/products/${params.id}`),
+			},
+			{
+				path: "/update-products/:id",
+				element: (
+					<PrivateRoute>
+						<UpdateProduct></UpdateProduct>
+					</PrivateRoute>
+				),
+				loader: ({ params }) =>
+					fetch(`https://autobuzz-server.vercel.app/products/${params.id}`),
 			},
 			{
 				path: "/login",
@@ -63,6 +71,7 @@ const router = createBrowserRouter([
 						<MyCart />
 					</PrivateRoute>
 				),
+				loader: () => fetch(`https://autobuzz-server.vercel.app/cart`),
 			},
 		],
 	},

@@ -16,7 +16,6 @@ const Register = () => {
 		const email = form.get("email");
 		const password = form.get("password");
 		const confirmPassword = form.get("confirmPassword");
-		console.log(name, email, password, confirmPassword);
 
 		// reset error and success
 		setSignupError("");

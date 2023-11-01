@@ -26,20 +26,32 @@ const Ad = () => {
 		>
 			<SwiperSlide>
 				<img
-					src="../../../../../../public/rolls-royce-ghost.jpg"
+					src="https://i.postimg.cc/7Y3Q8tdF/rolls-royce-ghost.jpg"
 					alt=""
 					className="w-screen"
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<img
-					src="../../../../../../public/rrAD.jpg"
+					src="https://i.postimg.cc/QC5TnNsR/05-1400x700-side-profile-gt-24.jpg"
 					alt=""
 					className="w-screen"
 				/>
 			</SwiperSlide>
-			<SwiperSlide>Slide 3</SwiperSlide>
-			<SwiperSlide>Slide 4</SwiperSlide>
+			<SwiperSlide>
+				<img
+					src="https://i.postimg.cc/NfY6YhN8/bmw-i7.jpg"
+					alt=""
+					className="w-screen"
+				/>
+			</SwiperSlide>
+			<SwiperSlide>
+				<img
+					src="https://i.postimg.cc/wMcm4drj/Phantom-II-Commission-Hero-Single-Twin-Card-min.jpg"
+					alt=""
+					className="w-screen"
+				/>
+			</SwiperSlide>
 		</Swiper>
 	);
 };
